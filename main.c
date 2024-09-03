@@ -25,7 +25,7 @@ int main()
         printf("1- Ajouter un livre au stock\n");
         printf("2- Afficher tous les livres disponibles\n");
         printf("3- Rechercher un livre par son titre\n");
-        printf("4- Mettre à jour la quantité d'un livre\n");
+        printf("4- Mettre Ã  jour la quantitÃ© d'un livre\n");
         printf("5- Supprimer un livre du stock\n");
         printf("6- Afficher le nombre total de livres en stock\n\n");
 
@@ -98,6 +98,9 @@ int main()
                     if(strcmp(titles[i], titlefind) == 0){
                         for(int j=i; j<counter; j++){
                             strcpy(titles[j],titles[j+1]);
+                            strcpy(authors[j],authors[j+1]);
+                            prices[j] = prices[j+1];
+                            quantities[j] = quantities[j+1];
                         }
                         found = 1;
                         counter--;
